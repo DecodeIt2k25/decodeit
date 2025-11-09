@@ -1,0 +1,193 @@
+/* -------- RESET & BASE -------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fcff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #222;
+}
+
+/* -------- HEADER -------- */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 25px 10px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.1em;
+  opacity: 0.95;
+}
+
+/* -------- MAIN CONTENT -------- */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* -------- HOME PAGE: COURSE LIST -------- */
+.courses {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.courses h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #003366;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.courses ul {
+  list-style: none;
+  padding: 0;
+}
+
+.courses li {
+  margin: 15px 0;
+}
+
+.courses a {
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.courses a:hover {
+  color: #0055aa;
+  transform: scale(1.05);
+}
+
+/* -------- COURSE PAGE: DAY CARDS -------- */
+.course-main {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.course-main h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #003366;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Layout for day cards side-by-side */
+.day-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.day-card {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  width: 270px;
+  height: 150px;
+  padding: 25px 20px;
+  border-radius: 18px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.day-card h3 {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.day-card p {
+  margin-top: 8px;
+  font-size: 1.05em;
+  opacity: 0.95;
+}
+
+.day-card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* -------- BUTTONS & LINKS -------- */
+.back-home {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.back-home:hover {
+  color: #0055aa;
+}
+
+/* -------- FOOTER -------- */
+footer {
+  background: #0077ff;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 20px 20px 0 0;
+  font-size: 0.95em;
+  margin-top: auto;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+}
+
+/* -------- RESPONSIVE DESIGN -------- */
+@media (max-width: 768px) {
+  .day-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .day-card {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .courses h2,
+  .course-main h2 {
+    font-size: 1.6em;
+  }
+}
